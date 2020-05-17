@@ -1,0 +1,331 @@
+#hr-home-page {
+  /* OPPO Family */
+  .section-oppo-family,
+  #home-oppo-family {
+    .oppo-family-layout {
+      margin-top: 0.4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 10px;
+
+      .family-item {
+        position: relative;
+        overflow: hidden;
+        height: 33.6vw;
+
+        .img-holder {
+          height: 100%;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: all linear 0.4s;
+          }
+        }
+
+        .context {
+          background-color: rgba(darken($oppo, 8%), 0.65);
+          color: $white;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0;
+          transition: all ease-in 100ms;
+
+          * {
+            color: $white;
+          }
+
+          .context-title {
+            font-size: 0.35rem;
+            margin-bottom: 0.05rem;
+            opacity: 0;
+            -webkit-transform: translateY(0.1rem);
+            transform: translateY(0.1rem);
+            transition: all ease-in 10ms 100ms;
+          }
+
+          .context-desc {
+            padding: 0 5%;
+            opacity: 0;
+            -webkit-transform: translateY(0.1rem);
+            transform: translateY(0.1rem);
+            transition: all ease-in 10ms 100ms;
+          }
+        }
+
+        &:hover {
+          .img-holder {
+            img {
+              transform: scale(1.075);
+              transition: all ease-out 1s;
+            }
+          }
+
+          .context {
+            opacity: 1;
+            transition: all ease-out 150ms;
+
+            .context-title {
+              opacity: 1;
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+              transition: all ease-out 330ms 130ms;
+            }
+
+            .context-desc {
+              opacity: 1;
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+              transition: all ease-out 330ms 260ms;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* OPPO Family - END */
+
+  @media #{$information-md-screen} {
+    .section-oppo-family,
+    #home-oppo-family {
+      .oppo-family-layout {
+        margin-top: 0.35rem;
+        grid-column-gap: 10px;
+
+        .family-item {
+          height: 33.6vw;
+
+          .context {
+            .context-title {
+              font-size: 0.33rem;
+              margin-bottom: 0.035rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-screen} {
+    .section-oppo-family,
+    #home-oppo-family {
+      .oppo-family-layout {
+        margin-top: 0.35rem;
+        grid-column-gap: 10px;
+
+        .family-item {
+          height: 33.6vw;
+
+          .context {
+            .context-title {
+              font-size: 0.285rem;
+              margin-bottom: 0.03rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-laptop} {
+    .section-oppo-family,
+    #home-oppo-family {
+      .oppo-family-layout {
+        margin-top: 0.35rem;
+        grid-column-gap: 10px;
+
+        .family-item {
+          height: 33.6vw;
+
+          .context {
+            .context-title {
+              font-size: 0.25rem;
+              margin-bottom: 0.05rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-tablet} {
+    .section-oppo-family,
+    #home-oppo-family {
+      padding-top: 0.25rem;
+
+      .oppo-family-layout {
+        // display: block;
+        // width: 240%;
+        // margin-left: -70%;
+
+        display: block;
+        width: 300%;
+        margin-left: -110%;
+        margin: 0.5rem 0 0.4rem -110%;
+
+        .family-item {
+          height: auto;
+
+          .img-holder {
+            height: 100%;
+            width: 94%;
+            overflow: hidden;
+            margin: auto;
+            height: 96.6vw;
+          }
+
+          // .context {
+          //   left: 3%;
+          //   right: 3%;
+
+          //   .context-title {
+          //     font-size: .23125rem;
+          //     margin-bottom: .05rem;
+          //   }
+
+          //   .context-desc {
+          //     padding: 0 10%;
+          //   }
+          // }
+
+          .context {
+            position: static;
+            text-align: left;
+            width: 88%;
+            margin-left: auto;
+            background-color: transparent;
+            color: #000;
+            padding-top: 30px;
+
+            .context-title {
+              font-size: 0.3rem;
+              margin-bottom: 0.035rem;
+              color: #000;
+            }
+
+            .context-desc {
+              padding: 0;
+              color: #000;
+            }
+
+            .cta-holder {
+              opacity: 0;
+              margin-top: 0.16rem;
+              -webkit-transform: translateY(0.1rem);
+              transform: translateY(0.1rem);
+              transition: all ease-in 10ms 100ms;
+
+              a {
+                display: flex;
+                align-items: center;
+                height: 0.2rem;
+
+                .arrow {
+                  height: 0.2rem;
+                  margin-left: 0.075rem;
+                  transform: translateY(-5%);
+
+                  img {
+                    height: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .slick-current.slick-active {
+          .family-item {
+            .img-holder {
+              img {
+                transform: scale(1.075);
+                transition: all ease-out 1s;
+              }
+            }
+
+            .context {
+              opacity: 1;
+              transition: all ease-out 150ms;
+
+              .context-title {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                transition: all ease-out 330ms 130ms;
+              }
+
+              .context-desc,
+              .cta-holder {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                transition: all ease-out 330ms 260ms;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-phone} {
+    .section-oppo-family,
+    #home-oppo-family {
+      .oppo-family-layout {
+        display: block;
+        width: 300%;
+        margin-left: -110%;
+        margin-top: 0.2rem;
+
+        .family-item {
+          height: auto;
+          .img-holder {
+            height: 100%;
+            width: 94%;
+            overflow: hidden;
+            margin: auto;
+            height: 96.6vw;
+          }
+
+          .context {
+            width: 90%;
+            padding-top: 20px;
+
+            .context-title {
+              font-size: 0.2rem;
+              margin-bottom: 0.05rem;
+              color: #000;
+            }
+
+            .context-desc {
+              padding: 0;
+              color: #000;
+            }
+
+            .cta-holder {
+              a {
+                height: 0.2rem;
+
+                .arrow {
+                  height: 0.15rem;
+                  margin-left: 0.035rem;
+                  transform: translateY(-12%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

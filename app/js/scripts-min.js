@@ -1,0 +1,1 @@
+import Common from"./modules/common";import About from"./modules/about";import VideoLazyLoad from"./modules/lazy-load-video";let lazyLoadVideo=new VideoLazyLoad;$(document).ready(function(){new Common;if($("#hr-about-page").length>0){new About}});
